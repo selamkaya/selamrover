@@ -14,8 +14,8 @@ namespace SelamRoverClient.Service
             try
             {
                 Console.WriteLine("Enter plateau width - height 'W H'");
-
                 var fieldInput = Console.ReadLine();
+
                 FieldModel plateu = CreateFieldModel(fieldInput);
 
                 List<CommandModel> commands = new List<CommandModel>();
