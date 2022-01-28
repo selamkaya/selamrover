@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelamRover.Api", "SelamRover.Api\SelamRover.Api.csproj", "{AD943595-9062-4AB4-90E9-22FB43E6B2EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelamRover.Common", "SelamRover.Common\SelamRover.Common.csproj", "{F902B10D-408D-483A-92B7-5C8E4662822E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelamRover.Operation", "SelamRover.Operation\SelamRover.Operation.csproj", "{6940A4D0-1B59-400C-97BA-A6B0E6AA1C12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelamRover.Service", "SelamRover.Service\SelamRover.Service.csproj", "{FC2A45F2-6FF4-44E1-898F-38759E9C9DB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{DC5B439D-7D07-4443-AEA0-9FB1278FD8CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelamRoverClient.Con", "SelamRoverClient.Con\SelamRoverClient.Con.csproj", "{F95B4393-1800-465D-A266-BB6E566E29BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelamRoverClient.Service", "SelamRoverClient.Service\SelamRoverClient.Service.csproj", "{2F3126F9-525A-4DA0-9F44-784A0A013781}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD943595-9062-4AB4-90E9-22FB43E6B2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD943595-9062-4AB4-90E9-22FB43E6B2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD943595-9062-4AB4-90E9-22FB43E6B2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD943595-9062-4AB4-90E9-22FB43E6B2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F902B10D-408D-483A-92B7-5C8E4662822E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F902B10D-408D-483A-92B7-5C8E4662822E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F902B10D-408D-483A-92B7-5C8E4662822E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F902B10D-408D-483A-92B7-5C8E4662822E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6940A4D0-1B59-400C-97BA-A6B0E6AA1C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6940A4D0-1B59-400C-97BA-A6B0E6AA1C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6940A4D0-1B59-400C-97BA-A6B0E6AA1C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6940A4D0-1B59-400C-97BA-A6B0E6AA1C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2A45F2-6FF4-44E1-898F-38759E9C9DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2A45F2-6FF4-44E1-898F-38759E9C9DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2A45F2-6FF4-44E1-898F-38759E9C9DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2A45F2-6FF4-44E1-898F-38759E9C9DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95B4393-1800-465D-A266-BB6E566E29BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95B4393-1800-465D-A266-BB6E566E29BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95B4393-1800-465D-A266-BB6E566E29BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95B4393-1800-465D-A266-BB6E566E29BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F3126F9-525A-4DA0-9F44-784A0A013781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3126F9-525A-4DA0-9F44-784A0A013781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3126F9-525A-4DA0-9F44-784A0A013781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3126F9-525A-4DA0-9F44-784A0A013781}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F95B4393-1800-465D-A266-BB6E566E29BA} = {DC5B439D-7D07-4443-AEA0-9FB1278FD8CC}
+		{2F3126F9-525A-4DA0-9F44-784A0A013781} = {DC5B439D-7D07-4443-AEA0-9FB1278FD8CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E72BAD9C-8FCE-43CF-81BD-0D4BE3707698}
+	EndGlobalSection
+EndGlobal
