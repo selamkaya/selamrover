@@ -11,26 +11,33 @@ namespace SelamRoverClient.Service
     {
         public void Run()
         {
-            Console.WriteLine("Enter plateau width - height 'W H'");
-
-            var fieldInput = Console.ReadLine();
-            FieldModel plateu = CreateFieldModel(fieldInput);
-
-            List<CommandModel> commands = new List<CommandModel>();
-            AddCommand(commands);
-
-            MoveRequestModel moveRequestModel = new MoveRequestModel() { Field = plateu, Commands = commands };
-            var response = Post<MoveRequestModel, MoveResponseModel>(moveRequestModel, "http://localhost:41526/move");
-
-            if (response.Failed)
+            try
             {
-                Console.WriteLine($"Error: { response.Message}");
-                return;
+                Console.WriteLine("Enter plateau width - height 'W H'");
+
+                var fieldInput = Console.ReadLine();
+                FieldModel plateu = CreateFieldModel(fieldInput);
+
+                List<CommandModel> commands = new List<CommandModel>();
+                AddCommand(commands);
+
+                MoveRequestModel moveRequestModel = new MoveRequestModel() { Field = plateu, Commands = commands };
+                var response = Post<MoveRequestModel, MoveResponseModel>(moveRequestModel, "http://localhost:41526/move");
+
+                if (response.Failed)
+                {
+                    Console.WriteLine($"Error: { response.Message}");
+                    return;
+                }
+
+                foreach (var result in response.Data.Results)
+                {
+                    Console.WriteLine($"{result.Ox} {result.Oy} {result.Pole}");
+                }
             }
-
-            foreach (var result in response.Data.Results)
+            catch (Exception ex)
             {
-                Console.WriteLine($"{result.Ox} {result.Oy} {result.Pole}");
+                Console.WriteLine($"Exception: { ex.Message}");
             }
 
             Console.ReadLine();
@@ -89,7 +96,7 @@ namespace SelamRoverClient.Service
         }
 
         #region Helper
-        public DataResult<TRes> Post<TReq, TRes>(TReq request, string url) where TReq : class where TRes : class
+        private DataResult<TRes> Post<TReq, TRes>(TReq request, string url) where TReq : class where TRes : class
         {
             try
             {

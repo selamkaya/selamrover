@@ -9,13 +9,14 @@ namespace SelamRoverClient.Con
     {
         static void Main(string[] args)
         {
-            IServiceProvider serviceProvider = Initialize();
+            IServiceProvider serviceProvider = InitializeServiceProvider();
+
             var roverService = serviceProvider.GetService<IRoverService>();
             roverService.Run();
         }
 
 
-        public static IServiceProvider Initialize()
+        public static IServiceProvider InitializeServiceProvider()
         {
             IServiceCollection services = new ServiceCollection();
             services.AddScoped<IRoverService, RoverService>();
