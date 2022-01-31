@@ -30,7 +30,7 @@ namespace SelamRover.Service
                 Ox = device.Position.Ox,
                 Oy = device.Position.Oy,
                 Pole = device.Pole,
-                InField = (device.Field.Width >= device.Position.Ox && device.Field.Height >= device.Position.Oy && device.Position.Ox >= 0 && device.Position.Oy >= 0) ? true : false
+                InField = (device.Field.Width >= device.Position.Ox && device.Field.Height >= device.Position.Oy && device.Position.Ox >= 0 && device.Position.Oy >= 0)
             };
         }
     }
